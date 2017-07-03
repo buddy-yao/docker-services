@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.5
+    container_name: mysql
+    ports:
+      - '0.0.0.0:3306:3306'
+    volumes:
+      - ./my.cnf:/etc/mysql/my.cnf
+      - ./data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+    restart: always
