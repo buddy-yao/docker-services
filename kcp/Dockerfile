@@ -10,3 +10,5 @@ RUN set -x \
 	&& mv server_linux_amd64 /usr/local/bin/kcp-server \
 	&& rm -rf /root/* \
 	&& apk del --purge curl
+
+ADD ./dnscrypt-proxy.toml /etc/dnscrypt-proxy.toml
